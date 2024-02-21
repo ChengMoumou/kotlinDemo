@@ -6,7 +6,6 @@
     android:layout_marginLeft="15dp"
     android:layout_marginTop="15dp"
     android:layout_marginRight="15dp"
-    android:theme="@style/Theme.MaterialComponents.Light"
     app:cardCornerRadius="4dp">
 
     <LinearLayout
@@ -20,7 +19,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:text="@string/forecast"
+            android:text="forecast"
             android:textColor="?android:attr/textColorPrimary"
             android:textSize="20sp" />
 

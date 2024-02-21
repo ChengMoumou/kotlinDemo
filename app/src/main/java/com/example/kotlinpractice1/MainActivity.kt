@@ -66,10 +66,10 @@ class MainActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
         // 获取 NotificationManager
         manager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        btntest.setOnClickListener {
-           /* val intent = Intent("com.homurax.broadcastbestpractice.FORCE_OFFLINE")
+      /*  btntest.setOnClickListener {
+           *//* val intent = Intent("com.homurax.broadcastbestpractice.FORCE_OFFLINE")
             sendBroadcast(intent)
-            Log.d(TAG, "onCreate: 发送广播")*/
+            Log.d(TAG, "onCreate: 发送广播")*//*
 //            onWriteFile()
 //            readFile()
 //            information()
@@ -87,17 +87,16 @@ class MainActivity : BaseActivity() {
         }
         cancel.setOnClickListener {
 //            manager.cancel(2)
-/*            thread {
+*//*            thread {
                 val msg = Message()
                 msg.what = 1
                 msg.obj = "传递的消息"
                 handler.handleMessage(msg)
-            }*/
+            }*//*
 //            unbindService(connection)
             startActivity(Intent(this, MainActivity2::class.java))
         }
-//        init()
-
+//        init()*/
     }
 
     fun information(){
@@ -130,7 +129,7 @@ class MainActivity : BaseActivity() {
 
         manager.notify(2, notification)
     }
-    fun init(){
+   /* fun init(){
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, contactsList)
         list_view.adapter = adapter
 
@@ -139,7 +138,7 @@ class MainActivity : BaseActivity() {
         }else{
             readContact()
         }
-    }
+    }*/
 
     override fun onRequestPermissionsResult(
         requestCode: Int,

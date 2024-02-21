@@ -2,14 +2,19 @@ package com.example.weather
 
 import androidx.lifecycle.liveData
 import com.example.weather.logic.model.Weather
+import com.example.weather.logic.network.Place
 import com.example.weather.logic.network.PlaceResponse
 import com.example.weather.logic.network.SunnyWeatherNetwork
+import com.example.weather.logic.place.PlaceDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
 import kotlin.coroutines.CoroutineContext
 
 object Repository {
+    fun savePlace(place: Place) = PlaceDao.savePlace(place)
+    fun getSavedPlace() = PlaceDao.getSavedPlace()
+    fun isPlaceSaved() = PlaceDao.isPlaceSaved()
     fun searchPlaces(query: String) = fire(Dispatchers.IO) {
         val placeResponse = SunnyWeatherNetwork.searchPlaces(query)
         if (placeResponse.status == "ok") {

@@ -4,10 +4,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.example.weather.Repository
+import com.example.weather.logic.network.Location
 import com.example.weather.logic.network.PlaceResponse
 
 class WeatherViewModel : ViewModel(){
-    private val locationLiveData = MutableLiveData<PlaceResponse.Location>()
+    private val locationLiveData = MutableLiveData<Location>()
 
     var locationLng = ""
 
@@ -20,7 +21,7 @@ class WeatherViewModel : ViewModel(){
     }
 
     fun refreshWeather(lng: String, lat: String) {
-        locationLiveData.value = PlaceResponse.Location(lng, lat)
+        locationLiveData.value = Location(lng, lat)
     }
 
 }

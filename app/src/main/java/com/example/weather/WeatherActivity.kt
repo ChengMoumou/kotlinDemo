@@ -15,6 +15,7 @@ import com.example.weather.logic.model.Weather
 import com.example.weather.logic.model.WeatherViewModel
 import com.homurax.sunnyweather.logic.model.getSky
 import com.homurax.sunnyweather.util.showToast
+import kotlinx.android.synthetic.main.activity_weather.swipeRefresh
 import kotlinx.android.synthetic.main.activity_weather.weatherLayout
 import kotlinx.android.synthetic.main.forecast.forecastLayout
 import kotlinx.android.synthetic.main.life_index.carWashingText
@@ -61,6 +62,11 @@ class WeatherActivity : AppCompatActivity() {
             }
         })
         viewModel.refreshWeather(viewModel.locationLng, viewModel.locationLat)
+    }
+
+    fun refreshWeather() {
+        viewModel.refreshWeather(viewModel.locationLng, viewModel.locationLat)
+        swipeRefresh.isRefreshing = true
     }
 
     private fun showWeatherInfo(weather: Weather) {
