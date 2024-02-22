@@ -1,17 +1,14 @@
-package com.example.weather.ui
+package com.example.weather.ui.place
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlinpractice1.R
-import com.example.weather.WeatherActivity
+import com.example.weather.ui.weather.WeatherActivity
 import com.example.weather.logic.network.Place
-import com.example.weather.logic.network.PlaceResponse
-import com.example.weather.logic.place.PlaceFragment
 import kotlinx.android.synthetic.main.activity_weather.drawerLayout
 
 class PlaceAdapter(private val fragment: PlaceFragment, private val placeList: List<Place>) : RecyclerView.Adapter<PlaceAdapter.ViewHolder>() {

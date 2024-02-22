@@ -1,8 +1,7 @@
-package com.example.weather.logic.place
+package com.example.weather.ui.place
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,12 +10,9 @@ import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.kotlinpractice1.MainActivity
+import com.example.weather.MainActivity
 import com.example.kotlinpractice1.R
-import com.example.weather.WeatherActivity
-import com.example.weather.logic.model.PlaceViewModel
-import com.example.weather.logic.network.SunnyWeatherNetwork
-import com.example.weather.ui.PlaceAdapter
+import com.example.weather.ui.weather.WeatherActivity
 import com.homurax.sunnyweather.util.showToast
 import kotlinx.android.synthetic.main.fragment_place.bgImageView
 import kotlinx.android.synthetic.main.fragment_place.recyclerView

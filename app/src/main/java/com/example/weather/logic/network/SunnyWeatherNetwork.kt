@@ -30,13 +30,11 @@ object SunnyWeatherNetwork {
                         continuation.resume(body)
                     } else {
                         continuation.resumeWithException(RuntimeException("response is null"))
-
                     }
                 }
 
                 override fun onFailure(call: Call<T>, t: Throwable) {
                     continuation.resumeWithException(RuntimeException(t))
-
                 }
             })
         }

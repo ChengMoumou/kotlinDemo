@@ -1,4 +1,4 @@
-package com.example.weather.logic.place
+package com.example.weather.logic.dao
 
 import android.content.Context
 import com.example.weather.SunnyWeatherApplication

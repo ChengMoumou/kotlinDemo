@@ -1,11 +1,10 @@
-package com.example.weather.logic.model
+package com.example.weather.ui.weather
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import com.example.weather.Repository
+import com.example.weather.logic.Repository
 import com.example.weather.logic.network.Location
-import com.example.weather.logic.network.PlaceResponse
 
 class WeatherViewModel : ViewModel(){
     private val locationLiveData = MutableLiveData<Location>()

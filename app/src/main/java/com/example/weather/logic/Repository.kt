@@ -1,11 +1,10 @@
-package com.example.weather
+package com.example.weather.logic
 
 import androidx.lifecycle.liveData
 import com.example.weather.logic.model.Weather
 import com.example.weather.logic.network.Place
-import com.example.weather.logic.network.PlaceResponse
 import com.example.weather.logic.network.SunnyWeatherNetwork
-import com.example.weather.logic.place.PlaceDao
+import com.example.weather.logic.dao.PlaceDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
@@ -59,5 +58,4 @@ object Repository {
             }
             emit(result)
         }
-
 }

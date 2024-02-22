@@ -1,4 +1,4 @@
-package com.example.weather
+package com.example.weather.ui.weather
 
 import android.graphics.Color
 import android.os.Build
@@ -12,7 +12,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.kotlinpractice1.R
 import com.example.weather.logic.model.Weather
-import com.example.weather.logic.model.WeatherViewModel
 import com.homurax.sunnyweather.logic.model.getSky
 import com.homurax.sunnyweather.util.showToast
 import kotlinx.android.synthetic.main.activity_weather.swipeRefresh
@@ -87,8 +86,7 @@ class WeatherActivity : AppCompatActivity() {
         for (i in 0 until days) {
             val skycon = daily.skycon[i]
             val temperature = daily.temperature[i]
-            val view =
-                LayoutInflater.from(this).inflate(R.layout.forecast_item, forecastLayout, false)
+            val view = LayoutInflater.from(this).inflate(R.layout.forecast_item, forecastLayout, false)
             val dateInfo = view.findViewById(R.id.dateInfo) as TextView
             val skyIcon = view.findViewById(R.id.skyIcon) as ImageView
             val skyInfo = view.findViewById(R.id.skyInfo) as TextView
